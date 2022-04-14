@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:travel_app/misc/colors.dart';
 import 'package:travel_app/widgets/responsive_button.dart';
 
-import '../widgets/app_large_text.dart';
-import '../widgets/app_text.dart';
+import '../../widgets/app_large_text.dart';
+import '../../widgets/app_text.dart';
 
 class WelcomePage extends StatelessWidget {
   WelcomePage({Key? key}) : super(key: key);
