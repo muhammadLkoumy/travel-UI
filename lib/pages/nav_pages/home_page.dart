@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
           Container(
             margin: const EdgeInsets.only(left: 20),
-            height: 260,
+            height: 280,
             width: double.infinity,
             child: TabBarView(
               controller: _tabController,
@@ -137,8 +137,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             height: 20,
           ),
           Container(
-            margin: const EdgeInsets.only(left: 30),
-            height: 120,
+            margin: const EdgeInsets.only(left: 20),
+            height: 100,
             child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
                 itemCount: 4,
@@ -150,8 +150,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       children: [
                         Container(
                           //margin: const EdgeInsets.only(right: 20),
-                          height: 80,
-                          width: 80,
+                          height: 60,
+                          width: 60,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             image: DecorationImage(
