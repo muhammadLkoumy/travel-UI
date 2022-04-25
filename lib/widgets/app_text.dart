@@ -5,12 +5,14 @@ class AppText extends StatelessWidget {
   final String txt;
   double? size;
   Color? color;
+  FontWeight? weight;
 
   AppText({
     Key? key,
     required this.txt,
     this.size = 16,
     this.color = Colors.black54,
+    this.weight = FontWeight.w400,
   }) : super(key: key);
 
   @override
@@ -20,7 +22,7 @@ class AppText extends StatelessWidget {
       style: GoogleFonts.lato(
         fontSize: size,
         color: color,
-        fontWeight: FontWeight.w400,
+        fontWeight: weight,
       ),
     );
   }
