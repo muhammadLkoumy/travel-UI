@@ -9,7 +9,6 @@ import 'package:travel_app/widgets/app_text.dart';
 import 'package:travel_app/widgets/responsive_button.dart';
 
 class DetailsPage extends StatefulWidget {
-
   final int index;
 
   const DetailsPage({Key? key, required this.index}) : super(key: key);
@@ -25,7 +24,6 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<TravelCubit, TravelStates>(builder: (context, state) {
-
       var info = TravelCubit.get(context).places;
 
       return Scaffold(
@@ -39,9 +37,12 @@ class _DetailsPageState extends State<DetailsPage> {
                   width: double.infinity,
                   height: 250,
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage("http://mark.bslmeiyu.com/uploads/"+info[widget.index].img.toString()),
-                          fit: BoxFit.cover)),
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            "http://mark.bslmeiyu.com/uploads/" +
+                                info[widget.index].img.toString()),
+                        fit: BoxFit.cover),
+                  ),
                 ),
               ),
               Positioned(
@@ -93,7 +94,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             color: Colors.black.withOpacity(0.8),
                           ),
                           AppLargeText(
-                            txt: "\$ "+info[widget.index].price.toString(),
+                            txt: "\$ " + info[widget.index].price.toString(),
                             color: AppColors.mainColor,
                           ),
                         ],
@@ -193,8 +194,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       const SizedBox(
                         height: 10,
                       ),
-                      AppText(
-                          txt: "${info[widget.index].description}"),
+                      AppText(txt: "${info[widget.index].description}"),
                     ],
                   ),
                 ),
